@@ -6,6 +6,7 @@ tags:
 - Python
 categories:
 - Tutorials
+mathjax: true
 ---
 
 ## Brief Introduction to Computer Programming
@@ -17,11 +18,11 @@ So we need to communicate with computers using their languages (computer program
 
 ### Components in a computer
 
-1. Central processing unit (CPU): execute your program. Similar to human brain, very fast but not that smart
-2. Input device: take inputs from users or other devices
-3. Output device: output information to users or other devices
-4. Main memory: store data, fast and temporary storage
-5. Secondary memory: slower but large size, permanent storage
+1.  Central processing unit (CPU): execute your program. Similar to human brain, very fast but not that smart
+2.  Input device: take inputs from users or other devices
+3.  Output device: output information to users or other devices
+4.  Main memory: store data, fast and temporary storage
+5.  Secondary memory: slower but large size, permanent storage
 
 ### What can a computer actually understand
 
@@ -56,21 +57,21 @@ Applications are programs which are built based upon an OS
 
 Main functions of an OS:
 
-* Controlling and monitoring system activities
-* Allocating and assigning system resources
-* Scheduling operations
+-   Controlling and monitoring system activities
+-   Allocating and assigning system resources
+-   Scheduling operations
 
 Popular OS: Windows, macOS, Linux, iOS, Android (a kind of Linux)...
 
 ### The units of information (data)
 
--   Bit (比特/位): a binary digit which takes either 0 or 1
-    Bit is the smallest information unit in computer programming
--   Byte (字节): 1 byte = 8 bits, every English character is represented by 1 byte
+-    Bit (比特/位): a binary digit which takes either 0 or 1
+     Bit is the smallest information unit in computer programming
+-    Byte (字节): 1 byte = 8 bits, every English character is represented by 1 byte
 -   KB (千字节):1 KB = 2^10 B = 1024 B
--   MB (兆字节):1MB = 2^20 B = 1024 KB
--   GB (千兆字节):1GB = 2^30 B = 1024 MB
--   TB (兆兆字节):1TB = 2^40 B = 1024 GB
+-    MB (兆字节):1MB = 2^20 B = 1024 KB
+-    GB (千兆字节):1GB = 2^30 B = 1024 MB
+-    TB (兆兆字节):1TB = 2^40 B = 1024 GB
 
 ## Number Systems
 
@@ -116,15 +117,10 @@ There are many methods or techniques which can be used to convert numbers from o
 
 #### Decimal to Other Base System
 
--   Step 1 − Divide the decimal number to be converted by the value of the new base.
-
--   Step 2 − Get the remainder from Step 1 as the rightmost digit (least significant digit) of new base
-
-  number.
-
--   Step 3 − Divide the quotient of the previous divide by the new base.
-
--   Step 4 − Record the remainder from Step 3 as the next digit (to the left) of the new base number.
+-    Step 1 − Divide the decimal number to be converted by the value of the new base.
+-    Step 2 − Get the remainder from Step 1 as the rightmost digit (least significant digit) of new base number.
+-    Step 3 − Divide the quotient of the previous divide by the new base.
+-    Step 4 − Record the remainder from Step 3 as the next digit (to the left) of the new base number.
 
 Repeat Steps 3 and 4, getting remainders from right to left, until the quotient becomes zero in Step 3.
 
@@ -146,13 +142,14 @@ Binary Number: 11101
 
 #### Other Base System to Decimal System
 
--   Step 1 − Determine the column (positional) value of each digit (this depends on the position ofthe digit and the base of the number system).
--   Step 2 − Multiply the obtained column values (in Step 1) by the digits in the corresponding columns.
-- Step 3 − Sum the products calculated in Step 2. The total is the equivalent value in decimal.
+-    Step 1 − Determine the column (positional) value of each digit (this depends on the position ofthe digit and the base of the number system).
+-    Step 2 − Multiply the obtained column values (in Step 1) by the digits in the corresponding columns.
+-   Step 3 − Sum the products calculated in Step 2. The total is the equivalent value in decimal.
 
 ##### Example
 
-Binary Number: 11101 -> Decimal Equlvalent
+Binary Number: 11101 -> Decimal Equivalent
+
 $$
 (1x2^4)+(1x2^3)+(1x2^2)+(1x2^1)+(1x2^0) = 16+8+4+0+1=29
 $$
@@ -169,9 +166,9 @@ display it on screen. It only understands on and off. So to actually run a comma
 
 To do that, a number of things happen:
 
-- The source code is translated into assembly language.
-- The assembly code is translated into machine language.
-- The machine language is directly executed as binary code.
+-   The source code is translated into assembly language.
+-   The assembly code is translated into machine language.
+-   The machine language is directly executed as binary code.
 
 Confused? Let’s go into a bit more detail. The coding language first has to translate its source code into assembly language, a super low-level language that uses words and numbers to represent binary patterns. Depending on the language, this may be done with an interpreter (where the program is translated line-by-line), or with a compiler (where the program is translated as a whole).
 
@@ -200,27 +197,27 @@ CPython, the reference implementation of Python, is free and open-source softwar
 
 In this course, we will use Python 3.5. Before we formally start the course, Python 3 must be installed in your computer first.
 
-*If you do not know how to use PowerShell on Windows, Terminal on OS X or bash on Linux then you need to go learn that first.* 
+_If you do not know how to use PowerShell on Windows, Terminal on OS X or bash on Linux then you need to go learn that first._ 
 
-*Why Python 3 not 2? Check the difference [https://wiki.python.org/moin/Python2orPython3](https://wiki.python.org/moin/Python2orPython3) ]*
+_Why Python 3 not 2? Check the difference <https://wiki.python.org/moin/Python2orPython3> ]_
 
 Windows Users:
 
-1. Open https://www.python.org/downloads/ in your browser
-2. Click **Download Python 3.5.2**, download [Windows x86 executable installer](https://www.python.org/ftp/python/3.6.0/python-3.6.0b2.exe)
-3. Install
+1.  Open <https://www.python.org/downloads/> in your browser
+2.  Click **Download Python 3.5.2**, download [Windows x86 executable installer](https://www.python.org/ftp/python/3.6.0/python-3.6.0b2.exe)
+3.  Install
 
 macOS Users (Recommended):
 
-1. Open your Terminal
-2. Type in the command shown here: http://brew.sh/
-3. Follow the instruction to install Homebrew, including xcode-command
-4. After you installed it, type in `brew install python3 virtualenv`
-5. Type in `python3 -V`, if it shows `Python 3.5.2` then everything is done.
+1.  Open your Terminal
+2.  Type in the command shown here: <http://brew.sh/>
+3.  Follow the instruction to install Homebrew, including xcode-command
+4.  After you installed it, type in `brew install python3 virtualenv`
+5.  Type in `python3 -V`, if it shows `Python 3.5.2` then everything is done.
 
 Linux Users:
 
-1. Use your package manager to install Python 3
+1.  Use your package manager to install Python 3
 
 ### Python Syntax
 
@@ -244,10 +241,8 @@ if __name__ == "__main__":
 
 Can you guess what will be on display?
 
-```
-Hello World Computer @nd Comity
-2016-10-13 15:22:24.510837
-```
+    Hello World Computer @nd Comity
+    2016-10-13 15:22:24.510837
 
 Why? We will explain it in future courses.
 
@@ -255,12 +250,12 @@ Why? We will explain it in future courses.
 
 What is IDE? An integrated development environment (**IDE**) is a software application that provides comprehensive facilities to computer programmers for software development. An **IDE** normally consists of a source code editor, build automation tools and a debugger. Most modern **IDEs** have intelligent code completion.
 
-Here, we recommend you to use PyCharm *when you believe that you master Python*. It is a commercial software by JetBrains. Shall we pay for it? No. As a student, we can enjoy the educational promotion.
+Here, we recommend you to use PyCharm _when you believe that you master Python_. It is a commercial software by JetBrains. Shall we pay for it? No. As a student, we can enjoy the educational promotion.
 
 Detailed information will not be shown here.
 
-1. Obtain JetBrains Education promotion here: https://www.jetbrains.com/students
-2. Download PyCharm here: https://www.jetbrains.com/pycharm
+1.  Obtain JetBrains Education promotion here: <https://www.jetbrains.com/students>
+2.  Download PyCharm here: <https://www.jetbrains.com/pycharm>
 
 ## Basic Python
 
@@ -270,9 +265,9 @@ Anything after a “#” is ignored by Python.
 
 Why comment?
 
--   Describe what is going to happen in a sequence of code
--   Document who wrote the code and other important information
--   Turn off a line of code – usually temporarily
+-     Describe what is going to happen in a sequence of code
+-     Document who wrote the code and other important information
+-     Turn off a line of code – usually temporarily
 
 ### Variable
 
@@ -319,7 +314,7 @@ Here, two integer objects with values 1 and 2 are assigned to variables a and b 
 
 #### Extensive Knowledge
 
-When you assign to a variable you are *binding* the name to an object. From that point onwards you can refer to the object by using the name, until that name is rebound.
+When you assign to a variable you are _binding_ the name to an object. From that point onwards you can refer to the object by using the name, until that name is rebound.
 
 In the first example the name `i` is bound to the value `5`. Binding different values to the name `j`does not have any effect on `i`, so when you later print the value of `i` the value is still `5`.
 
@@ -341,7 +336,7 @@ print(j)
 
 Note that it would be incorrect if you said "both lists have changed". There is only one list but it has two names (`i` and `j`) that refer to it.
 
-*Reference: http://stackoverflow.com/questions/13530998/python-variables-are-pointers*
+_Reference: <http://stackoverflow.com/questions/13530998/python-variables-are-pointers>_
 
 ### Operators
 
@@ -364,11 +359,11 @@ We can easily do numeric operations in Python -- actually you can take it as a s
 
 Highest to lowest precedence rule
 
--   Parenthesis are always with highest priority
--   Power
--   Multiplication, division and remainder
--   Addition and subtraction
--   Left to right
+-    Parenthesis are always with highest priority
+-    Power
+-    Multiplication, division and remainder
+-    Addition and subtraction
+-    Left to right
 
 #### Logical operators
 
@@ -391,15 +386,15 @@ Comparison operators check variables but do not change the values of variables.
 | `x > y`   | Is x greater than y?             |
 | `x != y`  | Is x not equal to y?             |
 
-*Careful!! “=“ is used for assignment*
+_Careful!! “=“ is used for assignment_
 
 ### Indentation
 
-- Increase indent: indent after an if or for statement (after :)
-- Maintain indent: to indicate the scope of the block (which lines are affected by the if/for)
-- Decrease indent: to back to the level of the if statement or for statement to indicate the end of the block
-- Blank lines are ignored – they do not affect indentation
-- Comments on a line by themselves are ignored w.r.t. indentation
+-   Increase indent: indent after an if or for statement (after :)
+-   Maintain indent: to indicate the scope of the block (which lines are affected by the if/for)
+-   Decrease indent: to back to the level of the if statement or for statement to indicate the end of the block
+-   Blank lines are ignored – they do not affect indentation
+-   Comments on a line by themselves are ignored w.r.t. indentation
 
 ### Evaluate
 
@@ -409,17 +404,15 @@ eval() gives the programmers the flexibility to determine what to execute at run
 
 One should be cautious about using it in situations where users could potentially cause problems with “inappropriate” input.
 
-
-
 ### Data Type
 
 #### Numbers
 
 Python supports four different numerical types −
 
-- int (signed integers)
-- float (floating point real values)
-- complex (complex numbers)
+-   int (signed integers)
+-   float (floating point real values)
+-   complex (complex numbers)
 
 Please be noted that, if you do something like `int(1.23)`, no exception will be raised. Instead, it will return an int object with value **1**. The int class do the converion -- assign the integer only.
 
@@ -433,9 +426,9 @@ Here we should take care that, the implement of float in Python causes the incor
 
 #### List
 
-Lists are the most versatile of Python's compound data types. A list contains items separated by commas and enclosed within square brackets ([]). To some extent, lists are similar to **arrays** in C. One difference between them is that all the items belonging to a list can be of different data type.
+Lists are the most versatile of Python's compound data types. A list contains items separated by commas and enclosed within square brackets (\[]). To some extent, lists are similar to **arrays** in C. One difference between them is that all the items belonging to a list can be of different data type.
 
-The values stored in a list can be accessed using the slice operator ([ ] and [:]) with indexes starting at 0 in the beginning of the list and working their way to end -1. The plus (+) sign is the list concatenation operator, and the asterisk (*) is the repetition operator.
+The values stored in a list can be accessed using the slice operator ([ ] and [:]) with indexes starting at 0 in the beginning of the list and working their way to end -1. The plus (+) sign is the list concatenation operator, and the asterisk (\*) is the repetition operator.
 
 For example,
 
@@ -457,32 +450,26 @@ What is a slice operator? The slice operator ([ ] and [:]) is to slice a list (o
 
 It's pretty simple really:
 
-```
-a[start:end] # items start through end-1
-a[start:]    # items start through the rest of the array
-a[:end]      # items from the beginning through end-1
-a[:]         # a copy of the whole array
-```
+    a[start:end] # items start through end-1
+    a[start:]    # items start through the rest of the array
+    a[:end]      # items from the beginning through end-1
+    a[:]         # a copy of the whole array
 
 There is also the `step` value, which can be used with any of the above:
 
-```
-a[start:end:step] # start through not past end, by step
-```
+    a[start:end:step] # start through not past end, by step
 
-The key point to remember is that the `:end` value represents the first value that is *not* in the selected slice. So, the difference beween `end` and `start` is the number of elements selected (if `step` is 1, the default).
+The key point to remember is that the `:end` value represents the first value that is _not_ in the selected slice. So, the difference beween `end` and `start` is the number of elements selected (if `step` is 1, the default).
 
-The other feature is that `start` or `end` may be a *negative* number, which means it counts from the end of the array instead of the beginning. So:
+The other feature is that `start` or `end` may be a _negative_ number, which means it counts from the end of the array instead of the beginning. So:
 
-```
-a[-1]    # last item in the array
-a[-2:]   # last two items in the array
-a[:-2]   # everything except the last two items
-```
+    a[-1]    # last item in the array
+    a[-2:]   # last two items in the array
+    a[:-2]   # everything except the last two items
 
 Python is kind to the programmer if there are fewer items than you ask for. For example, if you ask for `a[:-2]` and `a` only contains one element, you get an empty list instead of an error. Sometimes you would prefer the error, so you have to be aware that this may happen.
 
-*Reference: http://stackoverflow.com/questions/509211/explain-pythons-slice-notation*
+_Reference: <http://stackoverflow.com/questions/509211/explain-pythons-slice-notation>_
 
 ##### Loop
 
@@ -498,14 +485,12 @@ The main differences between lists and tuples are: Lists are enclosed in bracket
 
 Strings in Python are identified as a contiguous set of characters represented in the quotation marks. Python allows for either pairs of single or double quotes. Subsets of strings can be taken using the slice operator ([ ] and [:] ) with indexes starting at 0 in the beginning of the string and working their way from -1 at the end.
 
-The plus (+) sign is the string concatenation operator and the asterisk (*) is the multiple concatenation operator.
+The plus (+) sign is the string concatenation operator and the asterisk (\*) is the multiple concatenation operator.
 
 For example,
 
-```
-s = 'Hello' + 'LGU'  # s = 'HelloLGU'
-s = 'A'*10 			# s = 'AAAAAAAAAA'
-```
+    s = 'Hello' + 'LGU'  # s = 'HelloLGU'
+    s = 'A'*10 			# s = 'AAAAAAAAAA'
 
 String is essentially a list in Python, or more accurately, is a tuple. If we want to update a string, what can we do?
 
@@ -532,17 +517,15 @@ s = s.replace(' ', '.')
 
 Python's dictionaries are kind of hash table type. They work like associative arrays or hashes found in Perl and consist of key-value pairs. A dictionary key can be almost any Python type, but are usually numbers or strings. Values, on the other hand, can be any arbitrary Python object. Amazing, the value can be almost any Python data type too!
 
-Dictionaries are enclosed by curly braces ({ }) and values can be assigned and accessed using square braces ([]). The elements in a dict is unsorted.
+Dictionaries are enclosed by curly braces ({ }) and values can be assigned and accessed using square braces (\[]). The elements in a dict is unsorted.
 
 Example:
 
-```
-d = {'lgu': 'cuhksz',
-	'cuhk': 'shatin',
-	631: ['Guangdong', 'Zhejiang']}
-print(d)  # what will be printed?
-d[0]  # No suce operator. What is the first element in dict? I don't know. God know.
-```
+    d = {'lgu': 'cuhksz',
+    	'cuhk': 'shatin',
+    	631: ['Guangdong', 'Zhejiang']}
+    print(d)  # what will be printed?
+    d[0]  # No suce operator. What is the first element in dict? I don't know. God know.
 
 We can also loop a dictionary.
 
@@ -589,7 +572,7 @@ Sometimes, you may need to perform conversions between the built-in types. To co
 
 ### Logic Statements
 
-*Reference: http://python-textbok.readthedocs.io/en/latest/Selection_Control_Statements.html*
+_Reference: <http://python-textbok.readthedocs.io/en/latest/Selection_Control_Statements.html>_
 
 In procedurally written code, the computer usually executes instructions in the order that they appear. However, this is not always the case. One of the ways in which programmers can change the flow of control is the use of selection control statements.
 
@@ -619,7 +602,7 @@ As we can see from the flowchart, the instructions in the `if` body are only e
 
 #### The `else` clause
 
-An optional part of an if statement is the `else` clause. It allows us to specify an alternative instruction (or set of instructions) to be executed if the condition is *not* met:
+An optional part of an if statement is the `else` clause. It allows us to specify an alternative instruction (or set of instructions) to be executed if the condition is _not_ met:
 
 ```python
 if condition:
@@ -657,7 +640,7 @@ if size < 10.5:
     print(size)
 ```
 
-When comparing variables using `==`, we are doing a *value* comparison: we are checking whether the two variables have the same value. In contrast to this, we might want to know if two objects such as lists, dictionaries or custom objects that we have created ourselves are *the exact same object*. This is a test of *identity*. Two objects might have identical contents, but be two different objects. We compare identity with the `is` operator:
+When comparing variables using `==`, we are doing a _value_ comparison: we are checking whether the two variables have the same value. In contrast to this, we might want to know if two objects such as lists, dictionaries or custom objects that we have created ourselves are _the exact same object_. This is a test of _identity_. Two objects might have identical contents, but be two different objects. We compare identity with the `is` operator:
 
 ```python
 a = [1,2,3]
@@ -672,14 +655,14 @@ if a is b:
 
 It is generally the case (with some caveats) that if two variables are the same object, they are also equal. The reverse is not true – two variables could be equal in value, but not the same object.
 
-To test whether two objects are *not* the same object, we can use the `is not` operator:
+To test whether two objects are _not_ the same object, we can use the `is not` operator:
 
 ```python
 if a is not b:
     print("a and b are not the same object.")
 ```
 
-*Note: In many cases, variables of built-in immutable types which have the same value will also be identical. In some cases this is because the Python interpreter saves memory (and comparison time) by representing multiple values which are equal by the same object. You shouldn’t rely on this behaviour and make value comparisons using `is` – if you want to compare values, always use `==`.*
+_Note: In many cases, variables of built-in immutable types which have the same value will also be identical. In some cases this is because the Python interpreter saves memory (and comparison time) by representing multiple values which are equal by the same object. You shouldn’t rely on this behaviour and make value comparisons using `is` – if you want to compare values, always use `==`._
 
 #### Nested `if` statements
 
@@ -739,7 +722,7 @@ else:
     grade = D
 ```
 
-Now all the alternatives are clauses of one `if` statement, and are indented to the same level. This is called an *if ladder*. Here is a flowchart which more accurately represents this code:
+Now all the alternatives are clauses of one `if` statement, and are indented to the same level. This is called an _if ladder_. Here is a flowchart which more accurately represents this code:
 
 ![None](http://python-textbok.readthedocs.io/en/latest/_images/blockdiag-92200f5670e7241c7f70e1c06312813511774384.png)
 
@@ -789,19 +772,19 @@ A loop statement allows us to execute a statement or group of statements multipl
 
 Python programming language provides following types of loops to handle looping requirements.
 
-| Loop Type    | Description                              |
-| ------------ | ---------------------------------------- |
+| Loop Type    | Description                                                                                                                        |
+| ------------ | ---------------------------------------------------------------------------------------------------------------------------------- |
 | while loop   | Repeats a statement or group of statements while a given condition is TRUE. It tests the condition before executing the loop body. |
-| for loop     | Executes a sequence of statements multiple times and abbreviates the code that manages the loop variable. |
-| nested loops | You can use one or more loop inside any another while, or for or loop. |
+| for loop     | Executes a sequence of statements multiple times and abbreviates the code that manages the loop variable.                          |
+| nested loops | You can use one or more loop inside any another while, or for or loop.                                                             |
 
 Loop control statements change execution from its normal sequence. When execution leaves a scope, all automatic objects that were created in that scope are destroyed.
 Python supports the following control statements.
 
-| Control Statement    | Description                              |
-| -------------------- | ---------------------------------------- |
-| `break` statement    | Terminates the loop statement and transfers execution to the statement immediately following the loop. |
-| `continue` statement | Causes the loop to skip the remainder of its body and immediately retest its condition prior to reiterating. |
+| Control Statement    | Description                                                                                                                         |
+| -------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| `break` statement    | Terminates the loop statement and transfers execution to the statement immediately following the loop.                              |
+| `continue` statement | Causes the loop to skip the remainder of its body and immediately retest its condition prior to reiterating.                        |
 | `pass` statement     | The pass statement in Python is used when a statement is required syntactically but you do not want any command or code to execute. |
 
 #### While loop statement
@@ -837,7 +820,6 @@ for iterating_var in sequence:
 ```
 
 If a sequence contains an expression list, it is evaluated first. Then, the first item in the sequence is assigned to the iterating variable iterating_var. Next, the statements block is executed. Each item in the list is assigned to iterating_var, and the statement(s) block is executed until the entire sequence is exhausted.
-
 
 ##### The range() function
 
@@ -882,10 +864,10 @@ finally:
 
 Here are few important points about the above-mentioned syntax −
 
-- A single try statement can have multiple except statements. This is useful when the try block contains statements that may throw different types of exceptions.
-- You can also provide a generic except clause, which handles any exception.
-- After the except clause(s), you can include an else-clause. The code in the else-block executes if the code in the try: block does not raise an exception.
-- The else-block is a good place for code that does not need the try: block's protection.
+-   A single try statement can have multiple except statements. This is useful when the try block contains statements that may throw different types of exceptions.
+-   You can also provide a generic except clause, which handles any exception.
+-   After the except clause(s), you can include an else-clause. The code in the else-block executes if the code in the try: block does not raise an exception.
+-   The else-block is a good place for code that does not need the try: block's protection.
 
 #### Raise an exception
 
@@ -909,12 +891,12 @@ The names of built-in functions are usually considered as new reserved words, i.
 
 You can define functions to provide the required functionality. Here are simple rules to define a function in Python.
 
-- Function blocks begin with the keyword def followed by the function name and parentheses ( ( ) ).
-- Any input parameters or arguments should be placed within these parentheses. You can also define parameters inside these parentheses.
-- The first statement of a function can be an optional statement - the documentation string of the function or docstring.
-- The code block within every function starts with a colon (:) and is indented.
-- The statement return [expression] exits a function, optionally passing back an expression to the caller. A return statement with no arguments is the same as return None.
-- If one function does not return a value, it is a void function. Return None by default.
+-   Function blocks begin with the keyword def followed by the function name and parentheses ( ( ) ).
+-   Any input parameters or arguments should be placed within these parentheses. You can also define parameters inside these parentheses.
+-   The first statement of a function can be an optional statement - the documentation string of the function or docstring.
+-   The code block within every function starts with a colon (:) and is indented.
+-   The statement return [expression] exits a function, optionally passing back an expression to the caller. A return statement with no arguments is the same as return None.
+-   If one function does not return a value, it is a void function. Return None by default.
 
 ```python
 def functionname( parameters ):
@@ -928,10 +910,10 @@ def functionname( parameters ):
 
 You can call a function by using the following types of formal arguments:
 
-- Required arguments
-- Keyword arguments
-- Default arguments
-- Variable-length arguments
+-   Required arguments
+-   Keyword arguments
+-   Default arguments
+-   Variable-length arguments
 
 ##### Required arguments
 
