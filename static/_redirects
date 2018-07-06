@@ -1,0 +1,6 @@
+# Redirect domain aliases to primary domain
+https://computercomity.com/* https://blog.computercomity.com/:splat 301!
+
+# Optional: Redirect default Netlify subdomain to primary domain
+https://computercomity-blog.netlify.com/* https://blog.computercomity.com/:splat 301!
+
